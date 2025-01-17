@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class Division {
+    public static void main(String[] args) {
+        // Create a Scanner object for user input
+        Scanner scanner = new Scanner(System.in);
+
+        // Input two numbers
+        System.out.print("Enter the numerator: ");
+        double numerator = scanner.nextDouble();
+
+        System.out.print("Enter the denominator: ");
+        double denominator = scanner.nextDouble();
+
+        // Check for division by zero
+        if (denominator == 0) {
+            System.out.println("Error: Division by zero is not allowed.");
+        } else {
+            // Call the divide method and store the result
+            double result = divide(numerator, denominator);
+
+            // Display the result
+            System.out.println("The result of dividing " + numerator + " by " + denominator + " is: " + result);
+        }
+
+        // Close the scanner
+        scanner.close();
+    }
+
+    // Method to divide two numbers
+    public static double divide(double a, double b) {
+        return a / b;
+    }
+}
